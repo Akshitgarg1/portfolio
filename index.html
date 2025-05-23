@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | PESE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Portfolio</div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#storytelling">Storytelling</a></li>
+            <li><a href="#inspiration">Inspiration</a></li>
+            <li><a href="#pese">PESE Lab</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="background.jpg" alt="Background Image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="fade-in">Akshit Garg</h1>
+            <p class="tagline fade-in">Computer Science Student | Aspiring Developer</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/akshit-garg-0b37b52a6/" target="_blank" rel="noopener" class="social-icon" data-tooltip="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Akshitgarg1" target="_blank" rel="noopener" class="social-icon" data-tooltip="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://leetcode.com/u/akshit12_g/" target="_blank" rel="noopener" class="social-icon" data-tooltip="LeetCode">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="mailto:garg28966@gmail.com" class="social-icon" data-tooltip="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary-btn">
+                    <span class="btn-content">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Get in Touch</span>
+                    </span>
+                    <span class="btn-glow"></span>
+                </a>
+                <a href="#projects" class="btn secondary-btn">
+                    <span class="btn-content">
+                        <i class="fas fa-code"></i>
+                        <span>View Projects</span>
+                    </span>
+                    <span class="btn-glow"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-image">
+                        <img src="mypic (2).jpg" alt="Akshit Garg - Profile Image">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="lead">Enthusiastic B.Tech CSE student with a strong foundation in computer science, data structures,
+                        and problem-solving. Seeking an opportunity to apply my technical skills in a challenging
+                        environment, contribute to innovative software solutions, and gain industry experience.</p>
+                    <p>Currently pursuing my degree at Graphic Era Hill University, I am dedicated to mastering both theoretical concepts and practical applications of computer science. My academic journey has equipped me with a strong foundation in programming, data structures, and algorithms.</p>
+                    <p>My technical skills include:</p>
+                    <ul class="skills-list">
+                        <li>Programming Languages: C, C++, Python, Java</li>
+                        <li>Web Technologies: HTML5, CSS3, JavaScript, React.js, PHP</li>
+                        <li>Database Management: MySQL, MongoDB</li>
+                        <li>Tools & Platforms: Git, VS Code, Docker, Eclipse, IntelliJ IDEA</li>
+                        <li>Operating Systems: Windows, Linux</li>
+                        <li>Version Control: Git</li>
+                        <li>Machine Learning: Python, Scikit-learn, TensorFlow, Keras</li>
+                    </ul>
+                    <p>Beyond coding, I value continuous learning, collaboration, and creative problem-solving. I enjoy participating in hackathons, contributing to open-source projects, and staying updated with the latest tech trends.</p>
+                </div>
+            </div>
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Problem Solver</h3>
+                    <p>Analytical thinker with a passion for finding elegant solutions to complex challenges.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Tech Enthusiast</h3>
+                    <p>Always exploring new technologies and staying ahead of industry trends.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Leader</h3>
+                    <p>Experienced in leading projects and fostering collaborative environments.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Quick Learner</h3>
+                    <p>Adaptable and eager to master new skills and technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aug 2022 - Aug 2026</div>
+                        <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+                        <h4>Graphic Era Hill University</h4>
+                        <p>Currently pursuing my degree with a focus on software development and engineering.</p>
+                        <div class="timeline-details">
+                            <ul>
+                                <li>CGPA: 8.55/10 (till 5th semester)</li>
+                                <li>Activities: Volleyball, Basketball, Chess</li>
+                                <li>Skills: Java, Python, Problem Solving, C, C++</li>
+                                <li>Member of Computer Science Club</li>
+                                <li>Participated in multiple hackathons</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Apr 2021 - Mar 2022</div>
+                        <h3>Higher Secondary Education (12th Grade)</h3>
+                        <h4>Greenway Modern School</h4>
+                        <p>Completed 12th grade under the CBSE curriculum with a focus on the Science stream.</p>
+                        <div class="timeline-details">
+                            <ul>
+                                <li>Grade: 12th with 78.4% aggregate</li>
+                                <li>Core subjects: Physics, Chemistry, and Mathematics</li>
+                                <li>Additional subject: Computer Science</li>
+                                <li>Prepared for national-level entrance exams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Apr 2019 - Apr 2020</div>
+                        <h3>Secondary School Certificate (10th Grade)</h3>
+                        <h4>Greenway Modern School</h4>
+                        <p>Completed 10th grade under the CBSE curriculum with excellent academic performance.</p>
+                        <div class="timeline-details">
+                            <ul>
+                                <li>Grade: 10th with 90.6% aggregate</li>
+                                <li>Core subjects: Mathematics, Science, Social Science</li>
+                                <li>Languages: English and Hindi</li>
+                                <li>Active participant in extracurricular activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pic1.avif" alt="Project 1">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Akshitgarg1/NETFLIX-CONTENT-RECOMMENDATION-SYSTEM" target="_blank" rel="noopener" class="project-link" data-tooltip="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" rel="noopener" data-tooltip="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Netflix Content Recommendation System</h3>
+                        <p>Built a hybrid recommendation model using collaborative and content-based filtering to suggest personalized movies and TV shows.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                        <a href="https://github.com/Akshitgarg1/NETFLIX-CONTENT-RECOMMENDATION-SYSTEM" target="_blank" rel="noopener" class="btn project-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pic2.jpg" alt="Project 2">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Akshitgarg1/LIBRARY-MANAGEMENT-SYSTEM" target="_blank" rel="noopener" class="project-link" data-tooltip="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" rel="noopener" data-tooltip="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Library Management System</h3>
+                        <p>Developed a web-based system for efficient book borrowing, returning, and catalog management with user authentication.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/Akshitgarg1/LIBRARY-MANAGEMENT-SYSTEM" target="_blank" rel="noopener" class="btn project-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pic3.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Akshitgarg1/INTELLIGENT-CHATBOT-FOR-CSE-DEPARTMENT" target="_blank" rel="noopener" class="project-link" data-tooltip="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" rel="noopener" data-tooltip="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chatbot for CSE Department</h3>
+                        <p>Created an AI chatbot using NLP to assist students and faculty with academic queries and departmental information</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <a href="https://github.com/Akshitgarg1/INTELLIGENT-CHATBOT-FOR-CSE-DEPARTMENT" target="_blank" rel="noopener" class="btn project-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-body">
+                    <h2 class="modal-title"></h2>
+                    <div class="modal-image">
+                        <img src="" alt="Project Screenshot">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-description"></div>
+                        <div class="modal-tech"></div>
+                        <div class="modal-features">
+                            <h3>Key Features</h3>
+                            <ul></ul>
+                        </div>
+                        <div class="modal-links">
+                            <a href="#" class="btn primary-btn" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="btn secondary-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section">
+        <div class="container">
+            <h2 class="section-title">Self-Introduction & Interview Videos</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <h3>Career Objective</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/RRcZ3_19Q94?rel=0" 
+                            title="Career Objective"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Favourite Subjects</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/7CjyycvoADI?rel=0" 
+                            title="Favourite Subjects"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Projects</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/SCmKila-HQI?rel=0" 
+                            title="Projects"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Achievement</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/XPuOdOZ82Po?rel=0" 
+                            title="Achievement"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>Strength</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/DdJe4xrMRyc?rel=0" 
+                            title="Strength"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>PESE LAB</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/XKvD9Ref-E0?rel=0" 
+                            title="PESE LAB"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section id="storytelling" class="section">
+        <div class="container">
+            <h2 class="section-title">My Story</h2>
+            <p class="section-subtitle">From Curiosity to Code</p>
+            
+            <div class="story-content">
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="story-text">
+                        <p class="story-paragraph">It all started with a simple question — "How do apps work?" That curiosity, sparked during my school days, turned into a passion as I explored programming for the first time. I still remember the excitement when I wrote my first "Hello World" in C.</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="story-text">
+                        <p class="story-paragraph">College gave wings to my curiosity. I started working on real-world projects, from basic web pages to full-stack applications. Every project wasn't just code — it was a challenge, a lesson, and a step closer to the developer I aspire to be.</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="story-text">
+                        <p class="story-paragraph">I've faced bugs I couldn't fix, concepts I couldn't grasp at first, and moments of self-doubt. But I also discovered the joy of solving problems, building things that work, and learning how much I love tech.</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="story-text">
+                        <p class="story-paragraph">Today, I'm not just a student of Computer Science — I'm a lifelong learner. And this portfolio? It's not just a showcase — it's my story in motion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Section -->
+    <section id="inspiration" class="section">
+        <div class="container">
+            <h2 class="section-title">What Inspires Me</h2>
+            <p class="section-subtitle">People, ideas, and experiences that shape my journey in technology</p>
+            
+            <div class="inspiration-grid">
+                <div class="inspiration-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="pic4.jpg" alt="Steve Jobs">
+                            </div>
+                            <h3>Steve Jobs</h3>
+                            <p class="card-subtitle">Technology Visionary</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Steve Jobs</h3>
+                            <p>His relentless pursuit of perfection and ability to combine technology with art has deeply influenced my approach to software development. His famous quote "Stay hungry, stay foolish" reminds me to maintain curiosity and take calculated risks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiration-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="pic5.jpg" alt="Atomic Habits">
+                            </div>
+                            <h3>Atomic Habits</h3>
+                            <p class="card-subtitle">By James Clear</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Atomic Habits</h3>
+                            <p>This book transformed my approach to personal development and learning. Its emphasis on small, consistent improvements has helped me build better coding habits and maintain steady progress in my technical skills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiration-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="pic6.jpg" alt="Open Source Community">
+                            </div>
+                            <h3>Open Source Community</h3>
+                            <p class="card-subtitle">Global Collaboration</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Open Source Community</h3>
+                            <p>The collaborative spirit and knowledge-sharing culture of the open-source community inspires me to contribute and learn. It demonstrates how technology can bring people together to create something greater than the sum of its parts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiration-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="pic7.jpg" alt="My College Professor">
+                            </div>
+                            <h3>My College Professor</h3>
+                            <p class="card-subtitle">Mentor & Guide</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>My College Professor</h3>
+                            <p>My professor's passion for teaching and dedication to student success has shown me the importance of knowledge sharing. Their guidance has helped shape my understanding of computer science fundamentals and problem-solving approaches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PESE Lab Summary Section -->
+    <section id="pese" class="section">
+        <div class="container">
+            <h2 class="section-title">PESE Lab Summary</h2>
+            <p class="section-subtitle">Practical for Employability and Skills Enhancement</p>
+            
+            <div class="pese-intro">
+                <p>PESE Lab is a comprehensive program designed to enhance practical skills and employability through hands-on experience. Through various sessions, I've gained valuable insights into professional development, technical skills, and personal growth.</p>
+            </div>
+
+            <div class="pese-grid">
+                <div class="pese-card">
+                    <div class="card-header">
+                        <div class="session-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Self-Introduction & Interview Practice</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Recorded and practiced self-introduction videos covering career objectives, favorite subjects, projects, achievements, strengths, and weaknesses. This helped me develop better communication skills and self-awareness.</p>
+                        <div class="skills-gained">
+                            <span class="skill-tag"><i class="fas fa-comments"></i> Communication</span>
+                            <span class="skill-tag"><i class="fas fa-user-tie"></i> Professional Presentation</span>
+                            <span class="skill-tag"><i class="fas fa-brain"></i> Self-Reflection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pese-card">
+                    <div class="card-header">
+                        <div class="session-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Portfolio Development</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Created a professional portfolio website showcasing my skills, projects, and achievements. Learned modern web development techniques and best practices for personal branding.</p>
+                        <div class="skills-gained">
+                            <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pese-card">
+                    <div class="card-header">
+                        <div class="session-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Storytelling & Narrative Building</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Developed skills in crafting compelling narratives about my journey, experiences, and aspirations. Learned to effectively communicate my story to potential employers.</p>
+                        <div class="skills-gained">
+                            <span class="skill-tag"><i class="fas fa-pen-fancy"></i> Storytelling</span>
+                            <span class="skill-tag"><i class="fas fa-bullhorn"></i> Personal Branding</span>
+                            <span class="skill-tag"><i class="fas fa-users"></i> Audience Engagement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pese-card">
+                    <div class="card-header">
+                        <div class="session-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Career Planning & Goal Setting</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Explored career paths in technology and set clear, achievable goals. Developed a roadmap for professional growth and skill development.</p>
+                        <div class="skills-gained">
+                            <span class="skill-tag"><i class="fas fa-bullseye"></i> Goal Setting</span>
+                            <span class="skill-tag"><i class="fas fa-road"></i> Career Planning</span>
+                            <span class="skill-tag"><i class="fas fa-chart-line"></i> Progress Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pese-reflection">
+                <h3>Key Takeaways</h3>
+                <ul class="reflection-list">
+                    <li><i class="fas fa-check-circle"></i> Enhanced professional communication skills</li>
+                    <li><i class="fas fa-check-circle"></i> Developed a strong online presence</li>
+                    <li><i class="fas fa-check-circle"></i> Gained confidence in self-presentation</li>
+                    <li><i class="fas fa-check-circle"></i> Improved technical and soft skills</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- My Journey Section -->
+    <section id="journey" class="section">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <p class="section-subtitle">A timeline of my growth, challenges, and achievements in technology</p>
+            
+            <div class="journey-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018</div>
+                        <h3>The Beginning</h3>
+                        <p>My fascination with technology began when I built my first computer. This hands-on experience sparked my interest in understanding how computers work and what makes them tick.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h3>Academic Foundation</h3>
+                        <p>Started my journey in Computer Science, diving deep into programming fundamentals and data structures. The structured learning environment helped me build a strong technical foundation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021</div>
+                        <h3>First Project</h3>
+                        <p>Developed my first web application, combining frontend and backend technologies. This project taught me the importance of user experience and clean code architecture.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022</div>
+                        <h3>Team Collaboration</h3>
+                        <p>Joined a student development team, working on real-world projects. Learned valuable lessons in teamwork, version control, and project management.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3>Key Achievements</h3>
+                        <p>Won my first hackathon and contributed to open-source projects. These experiences helped me grow as a developer and build a professional network.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3>Future Goals</h3>
+                        <p>Focusing on mastering full-stack development and exploring emerging technologies. Excited to contribute to innovative projects and continue growing in the tech industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a question or want to work together? Feel free to reach out!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>akshit998g@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Uttarakhand, India</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Available</h3>
+                        <p>Mon - Fri: 9AM - 6PM</p>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Message subject">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Your message"></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="btn primary-btn">
+                        <span class="btn-content">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </span>
+                        <span class="btn-glow"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/akshit-garg-/" target="_blank" rel="noopener" class="social-icon" data-tooltip="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/akshitgarg2004" target="_blank" rel="noopener" class="social-icon" data-tooltip="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://leetcode.com/akshitgarg2004/" target="_blank" rel="noopener" class="social-icon" data-tooltip="LeetCode">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="mailto:akshit998g@gmail.com" class="social-icon" data-tooltip="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Akshit Garg. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 
