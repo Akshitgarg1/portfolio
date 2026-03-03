@@ -1,3 +1,7 @@
+// Navigation elements
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
 // Simple Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const icon = themeToggle.querySelector('i');
@@ -23,6 +27,13 @@ function updateIcon(theme) {
     }
 }
 
+// Mobile Menu Toggle
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const isExpanded = navLinks.classList.contains('active');
+    menuToggle.querySelector('i').className = isExpanded ? 'fas fa-times' : 'fas fa-bars';
+});
+
 // Smooth Scroll for navigation & Manual Active State
 const navLinksArray = document.querySelectorAll('.nav-links a');
 
@@ -33,6 +44,12 @@ navLinksArray.forEach(anchor => {
         // Update active class manually
         navLinksArray.forEach(link => link.classList.remove('active'));
         this.classList.add('active');
+
+        // Close mobile menu if open
+        if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            menuToggle.querySelector('i').className = 'fas fa-bars';
+        }
 
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
