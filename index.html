@@ -19,42 +19,85 @@
 </head>
 
 <body>
+    <div class="bg-gradient"></div>
+
     <!-- Minimal Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">AG</a>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            
             <div class="nav-links" id="nav-links">
                 <a href="#home">Home</a>
                 <a href="#about">Summary</a>
                 <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#projects">Work</a>
                 <a href="#skills">Skills</a>
                 <a href="#education">Education</a>
-                <a href="#achievements">Certifications</a>
+                <a href="#prowess">Coding</a>
+                <a href="#certs">Certs</a>
                 <a href="#socials">Socials</a>
-                <a href="#profiles">Coding</a>
+                <a href="#personality">Interests</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">
                     <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <div id="home" class="container main-content">
+    <div id="home" class="container main-content hero-wrapper">
+        <div class="hero-visuals">
+            <div class="visual-blob blob-1"></div>
+            <div class="visual-blob blob-2"></div>
+            <div class="visual-blob blob-3"></div>
+        </div>
+        
         <!-- Hero Section -->
         <header class="hero">
             <div class="status-badge">
-                <span class="pulse"></span> Available for Internships
+                <span class="pulse"></span>
+                <i class="fas fa-briefcase"></i>
+                Available for Internships
             </div>
             <h1 class="greeting">Akshit Garg</h1>
-            <p class="tagline">CSE Undergrad | Top 7% LeetCode (1833) | Full-Stack Developer | ML Enthusiast |
-                DeepLearning.AI Certified
-                | React, Python (Flask), C++, SQL</p>
-            <p class="location">Roorkee, Uttarakhand, India</p>
+            <div class="role-container">
+                <span class="role-static">I am a</span>
+                <span class="role-dynamic" id="role-text">System Architect</span>
+            </div>
+            <p class="tagline">Crafting high-performance system architectures and secure digital experiences.
+                Senior CSE Undergrad at Graphic Era Hill University.</p>
+            <p class="location"><i class="fas fa-location-dot"></i> Roorkee, Uttarakhand, India</p>
+
+            <!-- Interactive Terminal Widget -->
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="control-dot close"></span>
+                        <span class="control-dot minimize"></span>
+                        <span class="control-dot maximize"></span>
+                    </div>
+                    <div class="terminal-title">akshit@portfolio: ~ (bash)</div>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <div class="terminal-line last-line">
+                        <span class="t-prompt">akshit@portfolio:~$</span>
+                        <input type="text" id="terminal-input" spellcheck="false" autocomplete="off" autofocus placeholder="type 'help'...">
+                    </div>
+                </div>
+            </div>
+
             <div class="hero-action-bar">
+                <a href="https://drive.google.com/file/d/1T0TwW_9j6XnHo0ZFac11mzkTC6fEOzaQ/view?usp=sharing"
+                    target="_blank" class="resume-btn">
+                    <i class="fas fa-file-download"></i> Download Resume
+                </a>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/akshitgarg26" target="_blank" title="LinkedIn"><i
                             class="fab fa-linkedin"></i></a>
@@ -62,23 +105,20 @@
                             class="fab fa-github"></i></a>
                     <a href="mailto:garg28966@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
-                <a href="https://drive.google.com/file/d/1T0TwW_9j6XnHo0ZFac11mzkTC6fEOzaQ/view?usp=sharing" download
-                    class="resume-btn">
-                    <i class="fas fa-file-download"></i> View Resume
-                </a>
             </div>
         </header>
 
         <!-- About Section -->
         <section id="about" class="section">
-            <h2 class="section-title">Summary</h2>
+            <h2 class="section-title">Professional Summary</h2>
             <div class="about-flex">
                 <div class="about-text">
+                    <p class="philosophy">"I build systems where security and data integrity are the foundation. Whether it's architecting optimized PostgreSQL schemas or securing IAM platforms, I focus on building software that is as resilient as it is performant."</p>
                     <ul class="summary-list">
                         <li><strong>Final-year B.Tech CSE (2026)</strong> at Graphic Era Hill University, specializing
-                            in System Security, Machine Learning, and Distributed Systems.</li>
-                        <li><strong>Top 7% Globally on LeetCode</strong> with a 1833 Max Rating and 450+ solved
-                            problems, demonstrating strong algorithmic expertise.</li>
+                            in Database Management, System Security, and Distributed Systems.</li>
+                        <li><strong>Top 7% Globally on LeetCode</strong> with a 1833 Max Rating, demonstrating consistent
+                            problem-solving excellence under pressure.</li>
                         <li><strong>Full-Stack Engineer</strong> focused on architecting production-ready software, like
                             developing secure IAM platforms with RBAC and IP-aware protocols.</li>
                         <li><strong>ML Specialist</strong> with experience in deploying real-time classification models
@@ -96,136 +136,214 @@
         <!-- Experience Section -->
         <section id="experience" class="section">
             <h2 class="section-title">Leadership & Experience</h2>
-            <div class="minimal-list">
-                <div class="list-item">
-                    <div class="item-main">
-                        <span class="item-title">Project Lead – Major Graduation Project</span>
-                        <span class="item-subtitle">Graphic Era Hill University | Coordinating a team of 3 for a
-                            full-stack marketplace, managing Git-based workflows and backend API architecture.</span>
+            <div class="experience-timeline-container">
+                <div class="exp-item">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <div class="exp-header-main">
+                                <h3 class="exp-title">Project Lead – Major Graduation Project</h3>
+                                <p class="exp-company">Graphic Era Hill University</p>
+                            </div>
+                            <span class="exp-date">Sep 2025 – Present</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li><strong>Team Coordination:</strong> Leading a team of 3 developers to architect and build a high-performance full-stack marketplace.</li>
+                            <li><strong>Workflow Management:</strong> Established rigorous Git-based workflows (Git-Flow) and CI/CD basics to ensure codebase stability.</li>
+                            <li><strong>Technical Orchestration:</strong> Orchestrated the synchronization between frontend React components and backend Flask API delivery.</li>
+                        </ul>
                     </div>
-                    <span class="item-date">Sep 2025 – Present</span>
-                </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <span class="item-title">Team Lead – Project Based Learning (PBL)</span>
-                        <span class="item-subtitle">Graphic Era Hill University | Directed a 4-member team to deliver a
-                            software solution 2 weeks ahead of schedule by facilitating technical stand-ups.</span>
-                    </div>
-                    <span class="item-date">Mar 2025 – July 2025</span>
                 </div>
 
+                <div class="exp-item">
+                    <div class="exp-marker"></div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <div class="exp-header-main">
+                                <h3 class="exp-title">Team Lead – Project Based Learning (PBL)</h3>
+                                <p class="exp-company">Graphic Era Hill University</p>
+                            </div>
+                            <span class="exp-date">Mar 2025 – July 2025</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li><strong>Rapid Delivery:</strong> Directed a 4-member multidisciplinary team, delivering the final software solution <strong>2 weeks ahead of schedule</strong>.</li>
+                            <li><strong>Agile Practices:</strong> Facilitated daily technical stand-ups and simplified SCRUM practices, significantly improving team velocity.</li>
+                            <li><strong>Execution Strategy:</strong> Translated complex project requirements into actionable technical tasks, ensuring 100% feature coverage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="section">
+            <h2 class="section-title">What I Do</h2>
+            <div class="expertise-grid">
+                <article class="expertise-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Engineering</h3>
+                    <p>Architecting optimized PostgreSQL schemas and mastering Query Performance Tuning & Indexed Search for scale.</p>
+                </article>
+                <article class="expertise-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Full-Stack Dev</h3>
+                    <p>Building scalable web applications with React, Node.js, and Flask, focusing on robustness and
+                        speed.</p>
+                </article>
+                <article class="expertise-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>System Security</h3>
+                    <p>Designing secure IAM platforms with Role-Based Access Control and IP-aware security protocols.
+                    </p>
+                </article>
+                <article class="expertise-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Implementing real-time classification models using MobileNetV2 and optimizing neural networks.
+                    </p>
+                </article>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="minimal-list">
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title">Quick Add: Scheduler</div>
-                        <span class="item-subtitle">JavaScript, Manifest V3, HTML5 | Chrome extension to automate Google
-                            Calendar event creation from selected text.</span>
-                        <div class="item-links">
-                            <a href="https://github.com/Akshitgarg1/quick-add-google-calendar" target="_blank"
-                                class="code-link" title="Source Code"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" target="_blank" class="demo-link" title="Live Demo"><i
-                                    class="fas fa-external-link-alt"></i> Demo</a>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/iam_thumb.png" alt="Secure IAM System">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Security & Backend</span>
+                        <h3 class="project-title">Secure IAM System</h3>
+                        <div class="case-study">
+                            <p><strong>Challenge:</strong> Enforcing strict RBAC and IP-aware access in a stateless distributed environment.</p>
+                            <p><strong>Solution:</strong> Leveraged Flask's middleware capabilities to implement real-time IP tracking and policy enforcement.</p>
+                            <p><strong>Impact:</strong> Architected a system successfully mapping 100+ unique IP patterns for high-security infrastructure.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="mini-tag">Python</span>
+                                <span class="mini-tag">Flask</span>
+                                <span class="mini-tag">SQL</span>
+                            </div>
+                            <div class="item-links">
+                                <a href="https://github.com/Akshitgarg1/secure-iam-rbac" target="_blank"
+                                    class="code-link" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <span class="item-date">Jan 2026 – Feb 2026</span>
                 </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title">Secure IAM System</div>
-                        <span class="item-subtitle">Python, Flask, SQLite, SQLAlchemy | Architected an IAM system
-                            enforcing Role-Based Access Control and IP-aware access restrictions.</span>
-                        <div class="item-links">
-                            <a href="https://github.com/Akshitgarg1/secure-iam-rbac" target="_blank" class="code-link"
-                                title="Source Code"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" target="_blank" class="demo-link" title="Live Demo"><i
-                                    class="fas fa-external-link-alt"></i> Demo</a>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/os_thumb.png" alt="PagePulse OS Simulator">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Systems & Education</span>
+                        <h3 class="project-title">PagePulse Simulator</h3>
+                        <div class="case-study">
+                            <p><strong>Challenge:</strong> Visualizing abstract memory allocation logic (LRU, FIFO) in an intuitive way for beginners.</p>
+                            <p><strong>Solution:</strong> Used Chart.js for real-time dynamic rendering of memory frames and page faults.</p>
+                            <p><strong>Impact:</strong> Empowering 50+ students at GEHU to grasp complex Operating System internals through interaction.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="mini-tag">JavaScript</span>
+                                <span class="mini-tag">Chart.js</span>
+                            </div>
+                            <div class="item-links">
+                                <a href="https://github.com/Akshitgarg1/PagePulse" target="_blank" class="code-link"
+                                    title="Code"><i class="fab fa-github"></i></a>
+                                <a href="https://akshitgarg1.github.io/PagePulse/" target="_blank" class="demo-link"
+                                    title="Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <span class="item-date">Nov 2025 – Dec 2025</span>
                 </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title">PagePulse: OS Simulator</div>
-                        <span class="item-subtitle">JavaScript, Chart.js, HTML | Built a simulation platform for OS
-                            memory management algorithms.</span>
-                        <div class="item-links">
-                            <a href="https://github.com/Akshitgarg1/PagePulse" target="_blank" class="code-link"
-                                title="Source Code"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" target="_blank" class="demo-link" title="Live Demo"><i
-                                    class="fas fa-external-link-alt"></i> Demo</a>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/calendar_thumb.png" alt="Quick Add Scheduler">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Productivity Tools</span>
+                        <h3 class="project-title">Quick Add Scheduler</h3>
+                        <div class="case-study">
+                            <p><strong>Challenge:</strong> Contextually parsing text from any webpage to create high-accuracy calendar events via API.</p>
+                            <p><strong>Solution:</strong> Implemented Chrome Manifest V3 for secure, low-latency background script execution.</p>
+                            <p><strong>Impact:</strong> Streamlined scheduling workflows, reducing event creation time by approximately 70%.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="mini-tag">JavaScript</span>
+                                <span class="mini-tag">Manifest V3</span>
+                            </div>
+                            <div class="item-links">
+                                <a href="https://github.com/Akshitgarg1/quick-add-google-calendar" target="_blank"
+                                    class="code-link" title="Code"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <span class="item-date">Mar 2025 – June 2025</span>
                 </div>
             </div>
-            <a href="https://github.com/Akshitgarg1?tab=repositories" target="_blank" class="more-btn">
-                <i class="fab fa-github"></i> More on GitHub
-            </a>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/Akshitgarg1?tab=repositories" target="_blank" class="more-btn">
+                    <i class="fab fa-github"></i> View All Repositories
+                </a>
+            </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills & Current Learning -->
         <section id="skills" class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <div class="category-header"><i class="fas fa-terminal"></i> Languages</div>
-                    <div class="tags-flex">
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript / ES6+</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">HTML5 / CSS3</span>
-                        <span class="skill-tag">C</span>
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-container-next">
+                <div class="skills-column">
+                    <div class="comfort-zone mastered">
+                        <div class="zone-header"><i class="fas fa-check-double"></i> Mastered</div>
+                        <div class="tags-flex">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Query Optimization</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Security Protocols</span>
+                            <span class="skill-tag">DSA</span>
+                        </div>
+                    </div>
+                    <div class="comfort-zone experienced">
+                        <div class="zone-header"><i class="fas fa-check"></i> Experienced</div>
+                        <div class="tags-flex">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Linux (Bash)</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <div class="category-header"><i class="fas fa-layer-group"></i> Web & Backend</div>
-                    <div class="tags-flex">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">RESTful APIs</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Firebase</span>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <div class="category-header"><i class="fas fa-brain"></i> AI & Machine Learning</div>
-                    <div class="tags-flex">
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">MobileNetV2</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Random Forest</span>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <div class="category-header"><i class="fas fa-shield-alt"></i> Core Fundamentals</div>
-                    <div class="tags-flex">
-                        <span class="skill-tag">Data Structures & Algorithms</span>
-                        <span class="skill-tag">Object Oriented Programming</span>
-                        <span class="skill-tag">System Security</span>
-                        <span class="skill-tag">Operating Systems</span>
-                        <span class="skill-tag">DBMS</span>
-                        <span class="skill-tag">Computer Networks</span>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <div class="category-header"><i class="fas fa-tools"></i> Developer Tools</div>
-                    <div class="tags-flex">
-                        <span class="skill-tag">Git / GitHub</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">Linux (Bash)</span>
-                        <span class="skill-tag">MySQL Workbench</span>
-                        <span class="skill-tag">VS Code</span>
+                <div class="skills-column">
+                    <div class="comfort-zone learning">
+                        <div class="zone-header"><i class="fas fa-book-open"></i> Currently Learning / Exploring</div>
+                        <div class="learning-list">
+                            <div class="learning-item">
+                                <span class="skill-tag">Golang</span>
+                                <p>Exploring high-concurrency backend services and microservices.</p>
+                            </div>
+                            <div class="learning-item">
+                                <span class="skill-tag">DBMS Internals</span>
+                                <p>Deep-diving into B-Tree indexing, WAL, and transaction isolation levels in PostgreSQL.</p>
+                            </div>
+                            <div class="learning-item">
+                                <span class="skill-tag">System Design</span>
+                                <p>Architecting large-scale distributed systems and load balancing.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -233,115 +351,208 @@
 
         <!-- Education Section -->
         <section id="education" class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="minimal-list">
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title">
-                            <i class="fas fa-graduation-cap"></i> Graphic Era Hill University
+            <h2 class="section-title">Academic Journey</h2>
+            <div class="education-timeline">
+                <!-- University -->
+                <div class="education-card primary">
+                    <div class="edu-header">
+                        <div class="title-group">
+                            <i class="fas fa-graduation-cap university-icon"></i>
+                            <div>
+                                <h3>Graphic Era Hill University</h3>
+                                <p class="degree">B.Tech in Computer Science and Engineering</p>
+                            </div>
                         </div>
-                        <div class="item-subtitle">B.Tech in Computer Science and Engineering</div>
-                        <div class="item-subtitle" style="margin-top: 0.25rem;">CGPA: 8.52 / 10.00</div>
-                        <div class="tags-flex" style="margin-top: 1rem;">
-                            <span class="skill-tag">Data Structures & Algorithms</span>
-                            <span class="skill-tag">Operating Systems</span>
-                            <span class="skill-tag">DBMS</span>
-                            <span class="skill-tag">System Security</span>
-                            <span class="skill-tag">Machine Learning</span>
+                        <div class="edu-meta">
+                            <span class="timeline-date">2022 — 2026</span>
+                            <span class="edu-location">Dehradun, India</span>
                         </div>
                     </div>
-                    <div class="education-meta" style="text-align: right;">
-                        <span class="item-date">2022-2026</span>
-                        <div class="location-small"
-                            style="font-size: 0.8rem; color: var(--text-dim); margin-top: 0.5rem;">Dehradun, India</div>
+                    <div class="edu-body">
+                        <div class="performance-stats-grid">
+                            <div class="score-card main-cgpa">
+                                <span class="score-label">Overall CGPA</span>
+                                <span class="score-value">8.52 / 10.0</span>
+                            </div>
+                            <div class="sgpa-summary">
+                                <h5>Semester Performance (SGPA):</h5>
+                                <div class="sgpa-grid-row">
+                                    <div class="sgpa-pill"><span>Sem 1</span> 8.41</div>
+                                    <div class="sgpa-pill"><span>Sem 2</span> 8.68</div>
+                                    <div class="sgpa-pill"><span>Sem 3</span> 8.07</div>
+                                    <div class="sgpa-pill"><span>Sem 4</span> 8.61</div>
+                                    <div class="sgpa-pill highlight"><span>Sem 5</span> 9.00</div>
+                                    <div class="sgpa-pill"><span>Sem 6</span> 8.12</div>
+                                    <div class="sgpa-pill"><span>Sem 7</span> 8.84</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="coursework-section">
+                            <h4>Knowledge Domains:</h4>
+                            <div class="coursework-bento">
+                                <div class="subject-card">
+                                    <div class="subject-header">
+                                        <i class="fas fa-shield-halved"></i>
+                                        <h5>Systems & Security</h5>
+                                    </div>
+                                    <div class="course-tags">
+                                        <span class="course-tag">Operating Systems <span>TCS 502</span></span>
+                                        <span class="course-tag">Computer Networks <span>TCS 604</span></span>
+                                        <span class="course-tag">Compiler Design <span>TCS 601</span></span>
+                                        <span class="course-tag">System Security</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="subject-card">
+                                    <div class="subject-header">
+                                        <i class="fas fa-layer-group"></i>
+                                        <h5>Algorithmic Foundations</h5>
+                                    </div>
+                                    <div class="course-tags">
+                                        <span class="course-tag">DSA <span>TCS 302</span></span>
+                                        <span class="course-tag">DAA <span>TCS 409</span></span>
+                                        <span class="course-tag">OOPs (C++) <span>TCS 307</span></span>
+                                        <span class="course-tag">Discrete Structures</span>
+                                    </div>
+                                </div>
+
+                                <div class="subject-card">
+                                    <div class="subject-header">
+                                        <i class="fas fa-code-branch"></i>
+                                        <h5>Data & Development</h5>
+                                    </div>
+                                    <div class="course-tags">
+                                        <span class="course-tag">DBMS <span>TCS 503</span></span>
+                                        <span class="course-tag">Full Stack Web <span>TCS 693</span></span>
+                                        <span class="course-tag">Numerical Techs <span>TMA 502</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title">
-                            <i class="fas fa-school"></i> Greenway Modern Sr. Sec. School
+
+                <div class="school-grid">
+                    <!-- Class XII -->
+                    <div class="education-card school">
+                        <div class="edu-header">
+                            <div class="title-group">
+                                <i class="fas fa-school"></i>
+                                <div>
+                                    <h4>Class XII (CBSE)</h4>
+                                    <p class="school-name">Greenway Modern Sr. Sec. School</p>
+                                </div>
+                            </div>
+                            <span class="timeline-date">2022</span>
                         </div>
-                        <span class="item-subtitle">Class XII (CBSE) | Science (PCM) | 78.40%</span>
+                        <div class="score-pill">Science (PCM) | 78.40%</div>
                     </div>
-                    <div class="education-meta" style="text-align: right;">
-                        <span class="item-date">2021 — 2022</span>
-                        <div class="location-small"
-                            style="font-size: 0.8rem; color: var(--text-dim); margin-top: 0.5rem;">Roorkee, India</div>
-                    </div>
-                </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title">
-                            <i class="fas fa-school"></i> Greenway Modern Sr. Sec. School
+
+                    <!-- Class X -->
+                    <div class="education-card school">
+                        <div class="edu-header">
+                            <div class="title-group">
+                                <i class="fas fa-school"></i>
+                                <div>
+                                    <h4>Class X (CBSE)</h4>
+                                    <p class="school-name">Greenway Modern Sr. Sec. School</p>
+                                </div>
+                            </div>
+                            <span class="timeline-date">2021</span>
                         </div>
-                        <span class="item-subtitle">Class X (CBSE) | 90.60%</span>
-                    </div>
-                    <div class="education-meta" style="text-align: right;">
-                        <span class="item-date">2020 — 2021</span>
-                        <div class="location-small"
-                            style="font-size: 0.8rem; color: var(--text-dim); margin-top: 0.5rem;">Roorkee, India</div>
+                        <div class="school-scores">
+                            <div class="score-pill">Math: 97/100</div>
+                            <div class="score-pill">IT: 95/100</div>
+                            <div class="score-pill">Total: 90.60%</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Achievements & Certifications -->
-        <section id="achievements" class="section">
-            <h2 class="section-title">Achievements & Certifications</h2>
-            <div class="minimal-list">
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title"><i class="fas fa-code"></i> LeetCode Max Rating: 1833</div>
-                        <span class="item-subtitle">Top 6.48% Globally; 500+ problems solved across LeetCode and
-                            Codeforces, ranking in the Top 10% of several weekly contests.</span>
-                        <div class="item-links">
-                            <a href="https://leetcode.com/u/akshit12_g" target="_blank" class="demo-link"
-                                title="View Profile"><i class="fas fa-external-link-alt"></i> Profile</a>
+        <!-- Coding Prowess -->
+        <section id="prowess" class="section">
+            <h2 class="section-title">Competitive Programming</h2>
+            <div class="coding-stats-container">
+                <div class="leetcode-card wide">
+                    <div class="lc-header">
+                        <i class="fas fa-code"></i>
+                        <div class="lc-title-group">
+                            <h3>LeetCode Explorer</h3>
+                            <span class="rank-badge">Top 9.78% Globally</span>
                         </div>
                     </div>
-                </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title"><i class="fas fa-rocket"></i> Postman API Student Expert</div>
-                        <span class="item-subtitle">Certified Student Expert; recognized for mastery in API development
-                            lifecycle, testing, and automation fundamentals.</span>
-                        <div class="item-links">
-                            <a href="https://badges.parchment.com/public/assertions/V31mO5PmQe21PyHLTwmlgA?identity__email=gargakshit684%40gmail.com"
-                                target="_blank" class="demo-link" title="Verify Badge"><i
-                                    class="fas fa-certificate"></i> Verify</a>
+                    <div class="lc-stats">
+                        <div class="stat-box">
+                            <span class="stat-value">467</span>
+                            <span class="stat-label">Solved</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">1754</span>
+                            <span class="stat-label">Rating</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">70</span>
+                            <span class="stat-label">Streak</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">5</span>
+                            <span class="stat-label">Badges</span>
                         </div>
                     </div>
-                </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title"><i class="fab fa-aws"></i> AWS Academy Graduate</div>
-                        <span class="item-subtitle">Cloud Security Foundations; successfully completed rigorous training
-                            on AWS infrastructure and security protocols.</span>
-                        <div class="item-links">
-                            <a href="https://www.credly.com/go/9BUsv8U6" target="_blank" class="demo-link"
-                                title="Verify Certificate"><i class="fas fa-certificate"></i> Verify</a>
-                        </div>
+                    <div class="lc-footer">
+                        <p class="ask-me"><strong>Expertise:</strong> Max Rating 1833. Proficient in DP, Graph Theory, and System Design.</p>
+                        <a href="https://leetcode.com/u/akshit12_g" target="_blank" class="lc-btn">View Profile</a>
                     </div>
                 </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title"><i class="fas fa-brain"></i> DeepLearning.AI Certified</div>
-                        <span class="item-subtitle">Neural Networks & Deep Learning; specialized in model architecture
-                            optimization and hyperparameter tuning.</span>
-                        <div class="item-links">
-                            <a href="https://coursera.org/verify/RP8R52E5GX7B" target="_blank" class="demo-link"
-                                title="View Certificate"><i class="fas fa-certificate"></i>
-                                Verify</a>
-                        </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certs" class="section">
+            <h2 class="section-title">Verified Certifications</h2>
+            <div class="certifications-grid">
+                <div class="mini-cert standout">
+                    <i class="fas fa-trophy"></i>
+                    <div>
+                        <h4>ARIVOLIO 2K'26 Hackathon</h4>
+                        <span>Coding Challenge by Unstop (Feb 2026).</span>
                     </div>
                 </div>
-                <div class="list-item">
-                    <div class="item-main">
-                        <div class="item-title">
-                            <i class="fas fa-trophy"></i> Competitive Programming Mentions
-                        </div>
-                        <span class="item-subtitle">CodeQuest #27 (Naukri Campus), Code360 Weekly Contest 215 (Coding
-                            Ninjas); recognized for ranked performance in rapid-solving environments.</span>
+                <div class="mini-cert standout">
+                    <i class="fas fa-rocket"></i>
+                    <div>
+                        <h4>Postman Student Expert</h4>
+                        <span>API Fundamentals & Automation (Jan 2026).</span>
+                    </div>
+                </div>
+                <div class="mini-cert standout">
+                    <i class="fab fa-aws"></i>
+                    <div>
+                        <h4>AWS Cloud Security</h4>
+                        <span>AWS Academy Graduate (Jan 2026).</span>
+                    </div>
+                </div>
+                <div class="mini-cert">
+                    <i class="fas fa-database"></i>
+                    <div>
+                        <h4>SQL (Advanced) Cert</h4>
+                        <span>HackerRank Certified (Nov 2025).</span>
+                    </div>
+                </div>
+                <div class="mini-cert">
+                    <i class="fas fa-brain"></i>
+                    <div>
+                        <h4>Neural Networks | Coursera</h4>
+                        <span>DeepLearning.AI Optimization (Jun 2025).</span>
+                    </div>
+                </div>
+                <div class="mini-cert">
+                    <i class="fab fa-google"></i>
+                    <div>
+                        <h4>Google Cloud Foundations</h4>
+                        <span>NPTEL & Google Cloud (Aug 2023).</span>
                     </div>
                 </div>
             </div>
@@ -367,64 +578,96 @@
                         <span class="item-title"><i class="fas fa-envelope"></i> Email</span>
                     </div>
                 </a>
-                <a href="https://www.credly.com/users/akshit-garg.7fb636c4/edit#credly" target="_blank"
+                <!-- <a href="https://www.credly.com/users/akshit-garg.7fb636c4/edit#credly" target="_blank"
                     class="list-item profile-btn social-btn-main">
                     <div class="item-main">
                         <span class="item-title"><i class="fas fa-award"></i> Credly (Verified Badges)</span>
                     </div>
-                </a>
+                </a> -->
             </div>
         </section>
 
-        <!-- Coding Profiles -->
-        <section id="profiles" class="section">
-            <h2 class="section-title">Coding Profiles</h2>
-            <div class="minimal-list profile-list">
-                <a href="https://leetcode.com/u/akshit12_g/" target="_blank" class="list-item profile-btn">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-code"></i> LeetCode</span>
+        <!-- Personality / Beyond the IDE -->
+        <section id="personality" class="section">
+            <h2 class="section-title">Beyond the IDE</h2>
+            <div class="personality-grid">
+                <div class="personality-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Reading</h3>
+                    <p>"Deep Work" by Cal Newport — focusing on cultivating intense concentration in a distracted world.</p>
+                </div>
+                <div class="personality-card">
+                    <i class="fas fa-chess-knight"></i>
+                    <h3>Chess Enthusiast</h3>
+                    <p>Consistent player with a ~1500 ELO rating; fascinated by strategic thinking and pattern recognition.</p>
+                </div>
+                <div class="personality-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Mentorship</h3>
+                    <p>Actively mentoring juniors at GEHU on Data Structures, Algorithms, and System Security fundamentals.</p>
+                </div>
+                <div class="personality-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>IoT Tinkering</h3>
+                    <p>Exploring the intersection of hardware and security through small-scale automation projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-container">
+                <div class="contact-info-grid">
+                    <a href="mailto:garg28966@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <span>garg28966@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/akshitgarg26" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <span>Akshit Garg</span>
+                        </div>
+                    </a>
+                    <div class="contact-card">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Roorkee, India</span>
+                        </div>
                     </div>
-                </a>
-                <a href="https://codeforces.com/profile/axio" target="_blank" class="list-item profile-btn">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-terminal"></i> Codeforces</span>
+                </div>
+
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Simulation)')">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
                     </div>
-                </a>
-                <a href="https://www.codechef.com/users/akshit_z" target="_blank" class="list-item profile-btn">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-utensils"></i> CodeChef</span>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
                     </div>
-                </a>
-                <a href="https://www.geeksforgeeks.org/profile/gargaksy30r" target="_blank"
-                    class="list-item profile-btn">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-graduation-cap"></i> GeeksforGeeks</span>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="How can I help you?" required></textarea>
                     </div>
-                </a>
-                <a href="https://www.naukri.com/code360/profile/codeAkshit" target="_blank"
-                    class="list-item profile-btn">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-cubes"></i> Code360 by Coding Ninjas</span>
-                    </div>
-                </a>
-                <a href="https://atcoder.jp/users/akshit111" target="_blank" class="list-item profile-btn">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-trophy"></i> AtCoder</span>
-                    </div>
-                </a>
-                <a href="https://www.hackerrank.com/profile/gargakshit684" target="_blank"
-                    class="list-item profile-btn">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fab fa-hackerrank"></i> HackerRank</span>
-                    </div>
-                </a>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </section>
 
         <footer class="footer">
             <div class="footer-content">
-                <p>&copy; 2026 Akshit Garg · Roorkee, India</p>
-                <p class="last-updated">Last Updated: March 2026 · English & Hindi</p>
+                <p>&copy; 2026 Akshit Garg · Built with Passion</p>
+                <div class="social-links" style="margin-top: 1rem; justify-content: center;">
+                    <a href="https://github.com/Akshitgarg1" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/akshitgarg26" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </footer>
     </div>
