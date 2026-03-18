@@ -102,6 +102,31 @@ document.querySelectorAll('.section, #home').forEach(el => {
     observer.observe(el);
 });
 
+// Scroll Spy Navigation Observer
+const spyObserverOptions = {
+    rootMargin: "-40% 0px -60% 0px"
+};
+
+const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            // Update active nav link
+            navLinksArray.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}, spyObserverOptions);
+
+// Observe sections for scroll spy
+document.querySelectorAll('.section, #home').forEach(el => {
+    spyObserver.observe(el);
+});
+
 // Dynamic Role Text Typing Effect
 const roleText = document.getElementById('role-text');
 const roles = [
@@ -171,15 +196,25 @@ function createTerminalLine(input, isCommand = true) {
 }
 
 if (terminalInput) {
+    let commandHistory = [];
+    let historyIndex = -1;
+
     terminalInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            const input = terminalInput.value.trim().toLowerCase();
+            const rawInput = terminalInput.value.trim();
+            const input = rawInput.toLowerCase();
             const lastLine = terminalOutput.querySelector('.last-line');
             
             // Add the command line to output (before the input line)
-            if (input) {
-                const commandLine = createTerminalLine(input);
+            if (rawInput) {
+                const commandLine = createTerminalLine(rawInput);
                 terminalOutput.insertBefore(commandLine, lastLine);
+
+                // Add to history
+                if (commandHistory[commandHistory.length - 1] !== rawInput) {
+                    commandHistory.push(rawInput);
+                }
+                historyIndex = commandHistory.length;
             }
 
             // Process command
@@ -197,6 +232,21 @@ if (terminalInput) {
 
             terminalInput.value = '';
             terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            if (historyIndex > 0) {
+                historyIndex--;
+                terminalInput.value = commandHistory[historyIndex];
+            }
+        } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            if (historyIndex < commandHistory.length - 1) {
+                historyIndex++;
+                terminalInput.value = commandHistory[historyIndex];
+            } else {
+                historyIndex = commandHistory.length;
+                terminalInput.value = '';
+            }
         }
     });
 
@@ -215,3 +265,99 @@ if (terminalInput) {
 document.addEventListener('DOMContentLoaded', () => {
     typeRoles();
 });
+
+// Back to Top functionality
+const backToTopBtn = document.getElementById('back-to-top');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Toast Notification System
+const toastContainer = document.getElementById('toast-container');
+const contactForm = document.getElementById('contactForm');
+
+function showToast(message, type = 'success') {
+    if (!toastContainer) return;
+    
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    
+    const icon = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+    
+    toast.innerHTML = `
+        <i class="${icon}"></i>
+        <span>${message}</span>
+    `;
+    
+    toastContainer.appendChild(toast);
+    
+    // Trigger reflow for animation
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+    
+    // Remove toast after 3.5 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 400); // Wait for transition to finish
+    }, 3500);
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Basic form animation / feedback
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.style.opacity = '0.7';
+        submitBtn.style.cursor = 'wait';
+        
+        try {
+            // Send the form data to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                showToast('Message sent successfully!', 'success');
+                contactForm.reset(); // Clear the form
+            } else {
+                // If the user hasn't replaced YOUR_FORMSPREE_ID yet
+                if (contactForm.action.includes('YOUR_FORMSPREE_ID')) {
+                    showToast('Please insert your Formspree ID in index.html!', 'error');
+                } else {
+                    showToast('Oops! There was a problem sending your message.', 'error');
+                }
+            }
+        } catch (error) {
+            showToast('Oops! There was a network error.', 'error');
+        } finally {
+            // Revert button state
+            submitBtn.textContent = originalText;
+            submitBtn.style.opacity = '1';
+            submitBtn.style.cursor = 'pointer';
+        }
+    });
+}
