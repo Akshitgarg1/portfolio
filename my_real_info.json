@@ -1,0 +1,392 @@
+{
+  "name": "Akshit Garg",
+  "title": "CSE Undergraduate | Full-Stack Developer",
+  "location": "Roorkee, Uttarakhand, India",
+  "tagline": "CSE Undergraduate | Full-Stack Developer & ML Enthusiast | Graphic Era Hill University.",
+  "resume_url": "https://drive.google.com/file/d/1wR1ztJ9EDutHWCeL5T0nQRtvgU0MUKD0/view?usp=sharing",
+  "formspree_url": "https://formspree.io/f/mnjgzkqq",
+  "typing_roles": [
+    "Full-Stack Developer",
+    "CSE Undergraduate",
+    "Competitive Programmer",
+    "ML Enthusiast",
+    "LeetCoder"
+  ],
+
+  "about": {
+    "philosophy": "I build systems where security, data integrity, and performance form the foundation. I focus on delivering software that is as resilient as it is scalable.",
+    "bullets": [
+      {
+        "icon": "fa-graduation-cap",
+        "title": "Academic & Core Systems:",
+        "text": "B.Tech CSE at Graphic Era Hill University (2022-2026). Grounded in Database Management, Operating Systems, and System Security."
+      },
+      {
+        "icon": "fa-code",
+        "title": "Algorithmic Prowess:",
+        "text": "Top 9.79% globally on LeetCode (1833 Max Rating, 470+ solved). Experienced in optimizing complex algorithms."
+      },
+      {
+        "icon": "fa-layer-group",
+        "title": "Full-Stack & ML Dev:",
+        "text": "Experienced in building secure Flask & React applications, RBAC, and integrating real-time MobileNetV2 classifiers."
+      }
+    ]
+  },
+
+  "expertise": [
+    {
+      "icon": "fa-database",
+      "title": "Database Engineering",
+      "description": "Architecting optimized PostgreSQL schemas and mastering Query Performance Tuning & Indexed Search for scale."
+    },
+    {
+      "icon": "fa-code",
+      "title": "Full-Stack Dev",
+      "description": "Building scalable web applications with React, Node.js, and Flask, focusing on robustness and speed."
+    },
+    {
+      "icon": "fa-shield-halved",
+      "title": "System Security",
+      "description": "Designing secure IAM platforms with Role-Based Access Control and IP-aware security protocols."
+    },
+    {
+      "icon": "fa-brain",
+      "title": "Machine Learning",
+      "description": "Implementing real-time classification models using MobileNetV2 and optimizing neural networks."
+    }
+  ],
+
+  "beyond_the_ide": [
+    {
+      "icon": "fa-book-reader",
+      "title": "Reading",
+      "description": "\"Deep Work\" by Cal Newport — focusing on cultivating intense concentration in a distracted world."
+    },
+    {
+      "icon": "fa-chess-knight",
+      "title": "Chess Enthusiast",
+      "description": "Consistent player with a ~1500 ELO rating; fascinated by strategic thinking and pattern recognition."
+    },
+    {
+      "icon": "fa-users",
+      "title": "Mentorship",
+      "description": "Actively mentoring juniors at GEHU on Data Structures, Algorithms, and System Security fundamentals."
+    },
+    {
+      "icon": "fa-microchip",
+      "title": "IoT Tinkering",
+      "description": "Exploring the intersection of hardware and security through small-scale automation projects."
+    }
+  ],
+
+  "education": {
+    "university": {
+      "name": "Graphic Era Hill University",
+      "degree": "B.Tech in Computer Science and Engineering",
+      "duration": "2022 - 2026",
+      "location": "Dehradun, India",
+      "cgpa": "8.52 / 10.0",
+      "semester_sgpa": {
+        "Sem 1": 8.41,
+        "Sem 2": 8.68,
+        "Sem 3": 8.07,
+        "Sem 4": 8.61,
+        "Sem 5": 9.00,
+        "Sem 6": 8.12,
+        "Sem 7": 8.84
+      },
+      "coursework": [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Database Management Systems",
+        "Computer Networks",
+        "Object-Oriented Programming",
+        "Compiler Design",
+        "Discrete Mathematics"
+      ],
+
+      "knowledge_domains": {
+        "Systems & Security": [
+          "Operating Systems (TCS 502)",
+          "Computer Networks (TCS 604)",
+          "Compiler Design (TCS 601)",
+          "System Security"
+        ],
+        "Algorithmic Foundations": [
+          "DSA (TCS 302)",
+          "DAA (TCS 409)",
+          "OOPs (C++) (TCS 307)",
+          "Discrete Structures"
+        ],
+        "Data & Development": [
+          "DBMS (TCS 503)",
+          "Full Stack Web (TCS 693)",
+          "Numerical Techs (TMA 502)"
+        ]
+      }
+    },
+
+    "school": {
+      "class_xii": {
+        "board": "CBSE",
+        "school": "Greenway Modern Sr. Sec. School",
+        "year": "2022",
+        "stream": "Science (PCM)",
+        "percentage": "78.40%"
+      },
+
+      "class_x": {
+        "board": "CBSE",
+        "school": "Greenway Modern Sr. Sec. School",
+        "year": "2020",
+        "percentage": "90.60%"
+      }
+    }
+  },
+
+  "skills": {
+    "languages": [
+      "C++",
+      "Python",
+      "JavaScript",
+      "SQL",
+      "C"
+    ],
+
+    "web_development": [
+      "React.js",
+      "Flask",
+      "HTML",
+      "CSS",
+      "REST APIs",
+      "Firebase"
+    ],
+
+    "databases_and_tools": [
+      "PostgreSQL",
+      "MySQL",
+      "Git",
+      "GitHub",
+      "Postman",
+      "LaTeX"
+    ],
+
+    "machine_learning": [
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "MobileNetV2",
+      "Random Forest"
+    ],
+
+    "core_subjects": [
+      "Data Structures & Algorithms",
+      "Operating Systems",
+      "DBMS",
+      "Computer Networks",
+      "OOPs"
+    ],
+
+    "currently_exploring": [
+      "Docker",
+      "Golang Basics",
+      "System Design Basics"
+    ]
+  },
+
+  "experience": [
+    {
+      "title": "Project Lead - Major Project",
+      "organization": "Graphic Era Hill University",
+      "division": "Team-Based Marketplace Project – Full Stack Development",
+      "duration": "Sep 2025 - Present",
+      "technologies": ["React.js", "Flask", "Firebase", "Scikit-learn", "Python", "Git", "GitHub"],
+      "responsibilities": [
+        "Coordinating frontend and backend development for a team-based marketplace project.",
+        "Managing GitHub repositories, task distribution, and project workflow.",
+        "Integrating Flask backend APIs with the React frontend.",
+        "Collaborating with teammates on debugging, testing, and feature implementation."
+      ]
+    },
+
+    {
+      "title": "Team Lead - Project Based Learning (PBL)",
+      "organization": "Graphic Era Hill University",
+      "division": "Academic Projects Group – Software Engineering",
+      "duration": "Mar 2025 - Jul 2025",
+      "technologies": ["Flask", "SQLite", "JavaScript", "HTML", "CSS", "Git", "GitHub"],
+      "responsibilities": [
+        "Led a 4-member student team during project-based learning activities.",
+        "Helped divide tasks and monitor project progress.",
+        "Assisted teammates in debugging and implementation issues.",
+        "Successfully completed the project before the final deadline."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "TradeSmart - ML Powered Scrap Trading Platform",
+      "category": "Full-Stack + Machine Learning",
+      "challenge": "Building a full-stack marketplace for buying and selling second-hand products with AI capabilities.",
+      "solution": "Integrated MobileNetV2 for image search, Random Forest for price prediction, and Firebase Auth.",
+      "impact": "Developed an end-to-end platform with a React frontend and Flask backend APIs.",
+      "technologies": [
+        "React.js",
+        "Flask",
+        "Firebase",
+        "Scikit-learn",
+        "Python"
+      ],
+      "image": "assets/banner.png",
+      "links": {
+        "github": "https://github.com/Akshitgarg1/ML-Powered-Scrap-Trading-Platform"
+      },
+      "status": "Ongoing"
+    },
+    {
+      "title": "RoleGuard - RBAC Management System",
+      "category": "Security & Backend",
+      "challenge": "Enforcing strict RBAC and IP-aware access in a stateless distributed environment.",
+      "solution": "Built a role-based access control system using Flask and SQLAlchemy.",
+      "impact": "Implemented protected routes, added logging functionality, and used SQLite for secure tracking.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "SQLAlchemy",
+        "SQLite"
+      ],
+      "image": "assets/iam_thumb.png",
+      "links": {
+        "github": "https://github.com/Akshitgarg1/secure-iam-rbac"
+      }
+    },
+    {
+      "title": "PagePulse - OS Page Replacement Simulator",
+      "category": "Systems & Education",
+      "challenge": "Visualizing abstract memory allocation logic (LRU, FIFO) in an intuitive way for beginners.",
+      "solution": "Used Chart.js for real-time dynamic rendering of memory frames and page faults.",
+      "impact": "Empowering 50+ students at GEHU to grasp complex Operating System internals through interaction.",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "image": "assets/os_thumb.png",
+      "links": {
+        "github": "https://github.com/Akshitgarg1/PagePulse",
+        "demo": "https://akshitgarg1.github.io/PagePulse/"
+      }
+    },
+    {
+      "title": "Quick Add Scheduler",
+      "category": "Productivity Tools",
+      "challenge": "Contextually parsing text from any webpage to create high-accuracy calendar events via API.",
+      "solution": "Implemented Chrome Manifest V3 for secure, low-latency background script execution.",
+      "impact": "Streamlined scheduling workflows, reducing event creation time by approximately 70%.",
+      "technologies": [
+        "JavaScript",
+        "Chrome Manifest V3"
+      ],
+      "image": "assets/calendar_thumb.png",
+      "links": {
+        "github": "https://github.com/Akshitgarg1/quick-add-google-calendar"
+      }
+    }
+  ],
+
+  "achievements": {
+    "competitive_programming": {
+      "leetcode": {
+        "rank": "Top 9.79% Globally",
+        "solved": 477,
+        "rating": 1754,
+        "max_rating": 1833,
+        "badges": 5,
+        "profile": "https://leetcode.com/u/akshit12_g"
+      },
+      "geeksforgeeks": {
+        "rank": "Inst. Rank: 585",
+        "solved": 63,
+        "score": 178,
+        "profile": "https://www.geeksforgeeks.org/profile/gargaksy30r"
+      },
+      "code360": {
+        "platform": "Coding Ninjas",
+        "solved": 54,
+        "language": "C++ Default",
+        "profile": "https://www.naukri.com/code360/profile/codeAkshit"
+      },
+      "codeforces": {
+        "handle": "axio",
+        "solved": 117,
+        "max_streak": 10,
+        "profile": "https://codeforces.com/profile/axio"
+      },
+      "codechef": {
+        "handle": "akshit_z",
+        "rating": 1363,
+        "stars": 1,
+        "global_rank": 52736,
+        "country_rank": 49335,
+        "profile": "https://www.codechef.com/users/akshit_z"
+      }
+    },
+
+    "certifications": [
+      {
+        "title": "ARIVOLIO 2K'26 Hackathon",
+        "issuer": "Unstop",
+        "date": "Feb 2026",
+        "type": "Coding Challenge"
+      },
+      {
+        "title": "Postman Student Expert",
+        "description": "API Fundamentals & Automation",
+        "date": "Jan 2026"
+      },
+      {
+        "title": "AWS Cloud Security",
+        "issuer": "AWS Academy",
+        "date": "Jan 2026"
+      },
+      {
+        "title": "SQL (Advanced) Cert",
+        "issuer": "HackerRank",
+        "date": "Nov 2025"
+      },
+      {
+        "title": "Neural Networks",
+        "issuer": "Coursera (DeepLearning.AI)",
+        "description": "Optimization",
+        "date": "Jun 2025"
+      },
+      {
+        "title": "Google Cloud Foundations",
+        "issuer": "NPTEL & Google Cloud",
+        "date": "Aug 2023"
+      }
+    ]
+  },
+
+  "interests": [
+    "Problem Solving",
+    "Chess",
+    "Backend Development",
+    "Machine Learning Applications",
+    "Learning New Technologies"
+  ],
+
+  "profiles": {
+    "github": "https://github.com/Akshitgarg1",
+    "leetcode": "https://leetcode.com/u/akshit12_g",
+    "codeforces": "https://codeforces.com/profile/axio"
+  },
+
+  "contact": {
+    "email": "garg28966@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/akshitgarg26",
+    "github": "https://github.com/Akshitgarg1"
+  }
+}

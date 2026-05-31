@@ -15,11 +15,24 @@
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="bg-gradient"></div>
+    <div class="corner-waves top-right">
+        <div class="wave wave-4"></div>
+        <div class="wave wave-3"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-1"></div>
+    </div>
+    <div class="corner-waves bottom-left">
+        <div class="wave wave-4"></div>
+        <div class="wave wave-3"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-1"></div>
+    </div>
 
     <!-- Minimal Navigation -->
     <nav class="navbar">
@@ -27,17 +40,13 @@
             <a href="#home" class="nav-logo">AG</a>
 
             <div class="nav-links" id="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">Summary</a>
+                <a href="#home">About</a>
                 <a href="#experience">Experience</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#projects">Work</a>
+                <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#education">Education</a>
                 <a href="#prowess">Coding</a>
                 <a href="#certs">Certs</a>
-                <a href="#socials">Socials</a>
-                <a href="#personality">Interests</a>
                 <a href="#contact">Contact</a>
             </div>
 
@@ -59,72 +68,55 @@
             <div class="visual-blob blob-3"></div>
         </div>
 
-        <!-- Hero Section -->
-        <header class="hero">
-            <div class="status-badge">
-                <span class="pulse"></span>
-                <i class="fas fa-briefcase"></i>
-                Available for Internships
-            </div>
-            <h1 class="greeting">Akshit Garg</h1>
-            <div class="role-container">
-                <span class="role-static">I am a</span>
-                <span class="role-dynamic" id="role-text">System Architect</span>
-            </div>
-            <p class="tagline">Crafting high-performance system architectures and secure digital experiences.
-                Senior CSE Undergrad at Graphic Era Hill University.</p>
-            <p class="location"><i class="fas fa-location-dot"></i> Roorkee, Uttarakhand, India</p>
-
-            <!-- Interactive Terminal Widget -->
-            <div class="terminal-container">
-                <div class="terminal-header">
-                    <div class="terminal-controls">
-                        <span class="control-dot close"></span>
-                        <span class="control-dot minimize"></span>
-                        <span class="control-dot maximize"></span>
+        <!-- Combined About (Hero) Section -->
+        <section class="about-hero-section">
+            <div class="about-hero-grid">
+                <!-- Left side content -->
+                <div class="about-hero-left">
+                    <span class="about-hello">HELLO, I'M</span>
+                    <h1 class="greeting" id="hero-name">Akshit Garg</h1>
+                    <div class="role-container">
+                        <span class="role-dynamic" id="role-text">Backend & Full-Stack Developer</span>
                     </div>
-                    <div class="terminal-title">akshit@portfolio: ~ (bash)</div>
-                </div>
-                <div class="terminal-body" id="terminal-output">
-                    <div class="terminal-line last-line">
-                        <span class="t-prompt">akshit@portfolio:~$</span>
-                        <input type="text" id="terminal-input" spellcheck="false" autocomplete="off" autofocus
-                            placeholder="type 'help'...">
+                    <p class="philosophy-text" id="about-philosophy">"I build systems where security, data integrity, and performance form the foundation. I focus on delivering software that is as resilient as it is scalable."</p>
+                    
+                    <!-- Action Buttons -->
+                    <div class="about-hero-actions">
+                        <a href="https://www.linkedin.com/in/akshitgarg26" target="_blank" class="hero-btn-outline" id="btn-linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Akshitgarg1" target="_blank" class="hero-btn-outline" id="btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://drive.google.com/file/d/1wR1ztJ9EDutHWCeL5T0nQRtvgU0MUKD0/view?usp=sharing" target="_blank" class="hero-btn-filled" id="hero-resume">
+                            <i class="fas fa-file-download"></i> Resume
+                        </a>
+                    </div>
+
+                    <!-- Status Items Bar -->
+                    <div class="about-hero-status">
+                        <span class="status-item" id="hero-location">
+                            <i class="fas fa-location-dot"></i> Roorkee, Uttarakhand, India
+                        </span>
+                        <span class="status-item">
+                            <i class="fas fa-graduation-cap"></i> CSE '26 @ GEHU
+                        </span>
+                        <span class="status-item">
+                            <span class="pulse-green"></span>
+                            <i class="fas fa-briefcase"></i> Available for Internships
+                        </span>
                     </div>
                 </div>
-            </div>
 
-            <div class="hero-action-bar">
-                <a href="https://drive.google.com/file/d/1T0TwW_9j6XnHo0ZFac11mzkTC6fEOzaQ/view?usp=sharing"
-                    target="_blank" class="resume-btn">
-                    <i class="fas fa-file-download"></i> Download Resume
-                </a>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/akshitgarg26" target="_blank" title="LinkedIn"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Akshitgarg1" target="_blank" title="GitHub"><i
-                            class="fab fa-github"></i></a>
-                    <a href="mailto:garg28966@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </header>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2 class="section-title">Professional Summary</h2>
-            <div class="about-flex">
-                <div class="about-text">
-                    <p class="philosophy">"I build systems where security, data integrity, and performance form the foundation. From architecting optimized PostgreSQL schemas to securing IAM platforms, I focus on delivering software that is as resilient as it is scalable."</p>
-                    <ul class="summary-list">
-                        <li><i class="fas fa-graduation-cap"></i> <strong>Academic Foundation:</strong> Final-year B.Tech CSE undergrad at Graphic Era Hill University (2026), deeply focused on Database Management, System Security, and Distributed Systems.</li>
-                        <li><i class="fas fa-code"></i> <strong>Problem Solving:</strong> Top 7% Globally on LeetCode with a 1833 Max Rating. Proven ability to architect complex algorithms and solve intricate challenges under pressure.</li>
-                        <li><i class="fas fa-layer-group"></i> <strong>Full-Stack Engineering:</strong> Passionate about crafting production-grade software. Architected secure IAM platforms featuring rigorous Role-Based Access Control and IP-aware protocols.</li>
-                        <li><i class="fas fa-brain"></i> <strong>Machine Learning:</strong> Adept at integrating AI into practical applications. Deployed real-time image classification models using MobileNetV2 for modern digital marketplaces.</li>
-                        <li><i class="fas fa-shield-halved"></i> <strong>Core Fundamentals:</strong> Driven by a security-first mindset, firmly grounded in Operating Systems, Databases, and Computer Networks.</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <img src="mypic (2).jpg" alt="Akshit Garg" class="profile-pic">
+                <!-- Right side photograph with double-ring border -->
+                <div class="about-hero-right">
+                    <div class="avatar-ring-container">
+                        <div class="avatar-outer-ring">
+                            <div class="avatar-inner-ring">
+                                <img src="mypic.png" alt="Akshit Garg" class="about-avatar">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -132,173 +124,157 @@
         <!-- Experience Section -->
         <section id="experience" class="section">
             <h2 class="section-title">Leadership & Experience</h2>
-            <div class="experience-timeline-container">
+            <div class="experience-timeline-container" id="experience-container">
+                <!-- Project 2 (Project Lead) -->
                 <div class="exp-item">
-                    <div class="exp-marker"></div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <div class="exp-header-main">
-                                <h3 class="exp-title">Project Lead – Major Graduation Project</h3>
-                                <p class="exp-company">Graphic Era Hill University</p>
+                    <div class="exp-badge-num">2</div>
+                    <div class="exp-card">
+                        <div class="exp-card-header">
+                            <div class="exp-card-titles">
+                                <h3>Project Lead – Major Graduation Project</h3>
+                                <p class="exp-company-name">Graphic Era Hill University</p>
+                                <p class="exp-division-name">Team-Based Marketplace Project – Full Stack Development</p>
                             </div>
-                            <span class="exp-date">Sep 2025 – Present</span>
+                            <span class="exp-date-pill">Sep 2025 – Present</span>
                         </div>
-                        <ul class="exp-bullets">
-                            <li><strong>Team Coordination:</strong> Leading a team of 3 developers to architect and
-                                build a high-performance full-stack marketplace.</li>
-                            <li><strong>Workflow Management:</strong> Established rigorous Git-based workflows
-                                (Git-Flow) and CI/CD basics to ensure codebase stability.</li>
-                            <li><strong>Technical Orchestration:</strong> Orchestrated the synchronization between
-                                frontend React components and backend Flask API delivery.</li>
+                        <div class="exp-tags-row">
+                            <span class="exp-tag">React.js</span>
+                            <span class="exp-tag">Flask</span>
+                            <span class="exp-tag">Firebase</span>
+                            <span class="exp-tag">Scikit-learn</span>
+                            <span class="exp-tag">Python</span>
+                            <span class="exp-tag">Git</span>
+                            <span class="exp-tag">GitHub</span>
+                        </div>
+                        <ul class="exp-bullets-list">
+                            <li class="exp-bullet-item">Coordinating frontend and backend development for a team-based marketplace project.</li>
+                            <li class="exp-bullet-item">Managing GitHub repositories, task distribution, and project workflow.</li>
+                            <li class="exp-bullet-item">Integrating Flask backend APIs with the React frontend.</li>
+                            <li class="exp-bullet-item">Collaborating with teammates on debugging, testing, and feature implementation.</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Project 1 (Team Lead) -->
                 <div class="exp-item">
-                    <div class="exp-marker"></div>
-                    <div class="exp-content">
-                        <div class="exp-header">
-                            <div class="exp-header-main">
-                                <h3 class="exp-title">Team Lead – Project Based Learning (PBL)</h3>
-                                <p class="exp-company">Graphic Era Hill University</p>
+                    <div class="exp-badge-num">1</div>
+                    <div class="exp-card">
+                        <div class="exp-card-header">
+                            <div class="exp-card-titles">
+                                <h3>Team Lead – Project Based Learning (PBL)</h3>
+                                <p class="exp-company-name">Graphic Era Hill University</p>
+                                <p class="exp-division-name">Academic Projects Group – Software Engineering</p>
                             </div>
-                            <span class="exp-date">Mar 2025 – July 2025</span>
+                            <span class="exp-date-pill">Mar 2025 – July 2025</span>
                         </div>
-                        <ul class="exp-bullets">
-                            <li><strong>Rapid Delivery:</strong> Directed a 4-member multidisciplinary team, delivering
-                                the final software solution <strong>2 weeks ahead of schedule</strong>.</li>
-                            <li><strong>Agile Practices:</strong> Facilitated daily technical stand-ups and simplified
-                                SCRUM practices, significantly improving team velocity.</li>
-                            <li><strong>Execution Strategy:</strong> Translated complex project requirements into
-                                actionable technical tasks, ensuring 100% feature coverage.</li>
+                        <div class="exp-tags-row">
+                            <span class="exp-tag">Flask</span>
+                            <span class="exp-tag">SQLite</span>
+                            <span class="exp-tag">JavaScript</span>
+                            <span class="exp-tag">HTML</span>
+                            <span class="exp-tag">CSS</span>
+                            <span class="exp-tag">Git</span>
+                            <span class="exp-tag">GitHub</span>
+                        </div>
+                        <ul class="exp-bullets-list">
+                            <li class="exp-bullet-item">Led a 4-member student team during project-based learning activities.</li>
+                            <li class="exp-bullet-item">Helped divide tasks and monitor project progress.</li>
+                            <li class="exp-bullet-item">Assisted teammates in debugging and implementation issues.</li>
+                            <li class="exp-bullet-item">Successfully completed the project before the final deadline.</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Expertise Section -->
-        <section id="expertise" class="section">
-            <h2 class="section-title">What I Do</h2>
-            <div class="expertise-grid">
-                <article class="expertise-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Database Engineering</h3>
-                    <p>Architecting optimized PostgreSQL schemas and mastering Query Performance Tuning & Indexed Search
-                        for scale.</p>
-                </article>
-                <article class="expertise-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Full-Stack Dev</h3>
-                    <p>Building scalable web applications with React, Node.js, and Flask, focusing on robustness and
-                        speed.</p>
-                </article>
-                <article class="expertise-card">
-                    <i class="fas fa-shield-halved"></i>
-                    <h3>System Security</h3>
-                    <p>Designing secure IAM platforms with Role-Based Access Control and IP-aware security protocols.
-                    </p>
-                </article>
-                <article class="expertise-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Machine Learning</h3>
-                    <p>Implementing real-time classification models using MobileNetV2 and optimizing neural networks.
-                    </p>
-                </article>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="section">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
+            <div class="projects-grid" id="projects-container">
+                <!-- Project 0: TradeSmart -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/iam_thumb.png" alt="Secure IAM System">
+                    <div class="project-card-header">
+                        <h3 class="project-card-title">TradeSmart</h3>
+                        <div class="project-card-links">
+                            <a href="https://github.com/Akshitgarg1/TradeSmart" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-category">Security & Backend</span>
-                        <h3 class="project-title">Secure IAM System</h3>
-                        <div class="case-study">
-                            <p><strong>Challenge:</strong> Enforcing strict RBAC and IP-aware access in a stateless
-                                distributed environment.</p>
-                            <p><strong>Solution:</strong> Leveraged Flask's middleware capabilities to implement
-                                real-time IP tracking and policy enforcement.</p>
-                            <p><strong>Impact:</strong> Architected a system successfully mapping 100+ unique IP
-                                patterns for high-security infrastructure.</p>
-                        </div>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="mini-tag">Python</span>
-                                <span class="mini-tag">Flask</span>
-                                <span class="mini-tag">SQL</span>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://github.com/Akshitgarg1/secure-iam-rbac" target="_blank"
-                                    class="code-link" title="Source Code"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                    <div class="project-card-subtitle">Full-Stack + Machine Learning</div>
+                    <div class="case-study">
+                        <p><strong>Challenge:</strong> Building a full-stack marketplace for buying and selling second-hand products with AI capabilities.</p>
+                        <p><strong>Solution:</strong> Integrated MobileNetV2 for image search, Random Forest for price prediction, and Firebase Auth.</p>
+                        <p><strong>Impact:</strong> Developed an end-to-end platform with a React frontend and Flask backend APIs.</p>
+                    </div>
+                    <div class="project-card-tags">
+                        <span class="project-tag">React.js</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">Scikit-learn</span>
+                        <span class="project-tag">Python</span>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 1: RoleGuard -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/os_thumb.png" alt="PagePulse OS Simulator">
+                    <div class="project-card-header">
+                        <h3 class="project-card-title">RoleGuard</h3>
+                        <div class="project-card-links">
+                            <a href="https://github.com/Akshitgarg1/secure-iam-rbac" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-category">Systems & Education</span>
-                        <h3 class="project-title">PagePulse Simulator</h3>
-                        <div class="case-study">
-                            <p><strong>Challenge:</strong> Visualizing abstract memory allocation logic (LRU, FIFO) in
-                                an intuitive way for beginners.</p>
-                            <p><strong>Solution:</strong> Used Chart.js for real-time dynamic rendering of memory frames
-                                and page faults.</p>
-                            <p><strong>Impact:</strong> Empowering 50+ students at GEHU to grasp complex Operating
-                                System internals through interaction.</p>
-                        </div>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="mini-tag">JavaScript</span>
-                                <span class="mini-tag">Chart.js</span>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://github.com/Akshitgarg1/PagePulse" target="_blank" class="code-link"
-                                    title="Code"><i class="fab fa-github"></i></a>
-                                <a href="https://akshitgarg1.github.io/PagePulse/" target="_blank" class="demo-link"
-                                    title="Demo"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
+                    <div class="project-card-subtitle">Security & Backend</div>
+                    <div class="case-study">
+                        <p><strong>Challenge:</strong> Enforcing strict RBAC and IP-aware access in a stateless distributed environment.</p>
+                        <p><strong>Solution:</strong> Built a role-based access control system using Flask and SQLAlchemy.</p>
+                        <p><strong>Impact:</strong> Implemented protected routes, added logging functionality, and used SQLite for secure tracking.</p>
+                    </div>
+                    <div class="project-card-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">SQLAlchemy</span>
+                        <span class="project-tag">SQLite</span>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 2: PagePulse -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/calendar_thumb.png" alt="Quick Add Scheduler">
+                    <div class="project-card-header">
+                        <h3 class="project-card-title">PagePulse</h3>
+                        <div class="project-card-links">
+                            <a href="https://github.com/Akshitgarg1/PagePulse" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
+                            <a href="https://akshitgarg1.github.io/PagePulse/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <span class="project-category">Productivity Tools</span>
-                        <h3 class="project-title">Quick Add Scheduler</h3>
-                        <div class="case-study">
-                            <p><strong>Challenge:</strong> Contextually parsing text from any webpage to create
-                                high-accuracy calendar events via API.</p>
-                            <p><strong>Solution:</strong> Implemented Chrome Manifest V3 for secure, low-latency
-                                background script execution.</p>
-                            <p><strong>Impact:</strong> Streamlined scheduling workflows, reducing event creation time
-                                by approximately 70%.</p>
+                    <div class="project-card-subtitle">Systems & Education</div>
+                    <div class="case-study">
+                        <p><strong>Challenge:</strong> Visualizing abstract memory allocation logic (LRU, FIFO) in an intuitive way for beginners.</p>
+                        <p><strong>Solution:</strong> Used Chart.js for real-time dynamic rendering of memory frames and page faults.</p>
+                        <p><strong>Impact:</strong> Empowering 50+ students at GEHU to grasp complex Operating System internals through interaction.</p>
+                    </div>
+                    <div class="project-card-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Chart.js</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Quick Add Scheduler -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3 class="project-card-title">Quick Add Scheduler</h3>
+                        <div class="project-card-links">
+                            <a href="https://github.com/Akshitgarg1/quick-add-google-calendar" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
                         </div>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="mini-tag">JavaScript</span>
-                                <span class="mini-tag">Manifest V3</span>
-                            </div>
-                            <div class="item-links">
-                                <a href="https://github.com/Akshitgarg1/quick-add-google-calendar" target="_blank"
-                                    class="code-link" title="Code"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="project-card-subtitle">Productivity Tools</div>
+                    <div class="case-study">
+                        <p><strong>Challenge:</strong> Contextually parsing text from any webpage to create high-accuracy calendar events via API.</p>
+                        <p><strong>Solution:</strong> Implemented Chrome Manifest V3 for secure, low-latency background script execution.</p>
+                        <p><strong>Impact:</strong> Streamlined scheduling workflows, reducing event creation time by approximately 70%.</p>
+                    </div>
+                    <div class="project-card-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Manifest V3</span>
                     </div>
                 </div>
             </div>
@@ -313,50 +289,83 @@
         <!-- Skills & Current Learning -->
         <section id="skills" class="section">
             <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-container-next">
-                <div class="skills-column">
-                    <div class="comfort-zone mastered">
-                        <div class="zone-header"><i class="fas fa-check-double"></i> Mastered</div>
-                        <div class="tags-flex">
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Query Optimization</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">Security Protocols</span>
-                            <span class="skill-tag">DSA</span>
-                        </div>
-                    </div>
-                    <div class="comfort-zone experienced">
-                        <div class="zone-header"><i class="fas fa-check"></i> Experienced</div>
-                        <div class="tags-flex">
-                            <span class="skill-tag">React.js</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">Linux (Bash)</span>
-                            <span class="skill-tag">RESTful APIs</span>
-                        </div>
+            <div class="skills-grid-new" id="skills-grid-new">
+                <!-- Card 1: Languages -->
+                <div class="skill-group-card">
+                    <div class="skill-group-title">Languages</div>
+                    <div class="tags-flex">
+                        <span class="skill-tag"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                        <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
+                        <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> SQL</span>
+                        <span class="skill-tag"><i class="devicon-c-plain colored"></i> C</span>
                     </div>
                 </div>
-                <div class="skills-column">
-                    <div class="comfort-zone learning">
-                        <div class="zone-header"><i class="fas fa-book-open"></i> Currently Learning / Exploring</div>
-                        <div class="learning-list">
-                            <div class="learning-item">
-                                <span class="skill-tag">Golang</span>
-                                <p>Exploring high-concurrency backend services and microservices.</p>
-                            </div>
-                            <div class="learning-item">
-                                <span class="skill-tag">DBMS Internals</span>
-                                <p>Deep-diving into B-Tree indexing, WAL, and transaction isolation levels in
-                                    PostgreSQL.</p>
-                            </div>
-                            <div class="learning-item">
-                                <span class="skill-tag">System Design</span>
-                                <p>Architecting large-scale distributed systems and load balancing.</p>
-                            </div>
-                        </div>
+
+                <!-- Card 2: Web Development -->
+                <div class="skill-group-card">
+                    <div class="skill-group-title">Web Development</div>
+                    <div class="tags-flex">
+                        <span class="skill-tag"><i class="devicon-react-original colored"></i> React.js</span>
+                        <span class="skill-tag"><i class="devicon-flask-original"></i> Flask</span>
+                        <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+                        <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+                        <span class="skill-tag"><i class="fas fa-gears" style="color: #f97316;"></i> REST APIs</span>
+                        <span class="skill-tag"><i class="devicon-firebase-plain colored"></i> Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Databases -->
+                <div class="skill-group-card">
+                    <div class="skill-group-title">Databases</div>
+                    <div class="tags-flex">
+                        <span class="skill-tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                        <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Machine Learning -->
+                <div class="skill-group-card">
+                    <div class="skill-group-title">Machine Learning</div>
+                    <div class="tags-flex">
+                        <span class="skill-tag"><i class="fas fa-brain" style="color: #6366f1;"></i> Scikit-learn</span>
+                        <span class="skill-tag"><i class="devicon-pandas-plain colored"></i> Pandas</span>
+                        <span class="skill-tag"><i class="devicon-numpy-plain colored"></i> NumPy</span>
+                        <span class="skill-tag"><i class="fas fa-eye" style="color: #14b8a6;"></i> MobileNetV2</span>
+                        <span class="skill-tag"><i class="fas fa-tree" style="color: #22c55e;"></i> Random Forest</span>
+                    </div>
+                </div>
+
+                <!-- Card 5: Core Subjects -->
+                <div class="skill-group-card">
+                    <div class="skill-group-title">Core Subjects</div>
+                    <div class="tags-flex">
+                        <span class="skill-tag"><i class="fas fa-code-branch" style="color: #60a5fa;"></i> Data Structures & Algorithms</span>
+                        <span class="skill-tag"><i class="fas fa-desktop" style="color: #f43f5e;"></i> Operating Systems</span>
+                        <span class="skill-tag"><i class="fas fa-database" style="color: #10b981;"></i> DBMS</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired" style="color: #a855f7;"></i> Computer Networks</span>
+                        <span class="skill-tag"><i class="fas fa-cubes" style="color: #fbbf24;"></i> OOPs</span>
+                    </div>
+                </div>
+
+                <!-- Card 6: Tools -->
+                <div class="skill-group-card">
+                    <div class="skill-group-title">Tools</div>
+                    <div class="tags-flex">
+                        <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git</span>
+                        <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-paper-plane" style="color: #ff6c37;"></i> Postman</span>
+                        <span class="skill-tag"><i class="fas fa-file-pdf" style="color: #9f1239;"></i> LaTeX</span>
+                    </div>
+                </div>
+
+                <!-- Card 7: Currently Exploring -->
+                <div class="skill-group-card">
+                    <div class="skill-group-title">Currently Exploring</div>
+                    <div class="tags-flex">
+                        <span class="skill-tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+                        <span class="skill-tag"><i class="devicon-go-original-wordmark colored"></i> Golang Basics</span>
+                        <span class="skill-tag"><i class="fas fa-sitemap" style="color: #3b82f6;"></i> System Design Basics</span>
                     </div>
                 </div>
             </div>
@@ -365,7 +374,7 @@
         <!-- Education Section -->
         <section id="education" class="section">
             <h2 class="section-title">Academic Journey</h2>
-            <div class="education-timeline">
+            <div class="education-timeline" id="education-timeline">
                 <!-- University -->
                 <div class="education-card primary">
                     <div class="edu-header">
@@ -472,13 +481,9 @@
                                     <p class="school-name">Greenway Modern Sr. Sec. School</p>
                                 </div>
                             </div>
-                            <span class="timeline-date">2021</span>
+                            <span class="timeline-date">2020</span>
                         </div>
-                        <div class="school-scores">
-                            <div class="score-pill">Math: 97/100</div>
-                            <div class="score-pill">IT: 95/100</div>
-                            <div class="score-pill">Total: 90.60%</div>
-                        </div>
+                        <div class="score-pill">Total: 90.60%</div>
                     </div>
                 </div>
             </div>
@@ -487,7 +492,7 @@
         <!-- Coding Prowess -->
         <section id="prowess" class="section">
             <h2 class="section-title">Competitive Programming</h2>
-            <div class="coding-stats-grid">
+            <div class="coding-stats-grid" id="coding-stats-container">
                 <!-- LeetCode -->
                 <div class="platform-card leetcode">
                     <div class="platform-header">
@@ -507,17 +512,14 @@
                             <span class="stat-label">Rating</span>
                         </div>
                         <div class="stat-box">
-                            <span class="stat-value">76 <i class="fas fa-fire" style="color:#f59e0b;font-size:0.9rem;"></i></span>
-                            <span class="stat-label">Streak</span>
-                        </div>
-                        <div class="stat-box">
                             <span class="stat-value">5</span>
                             <span class="stat-label">Badges</span>
                         </div>
                     </div>
                     <div class="platform-footer">
                         <p class="ask-me">Max Rating: 1833 | DP, Graphs, System Design</p>
-                        <a href="https://leetcode.com/u/akshit12_g" target="_blank" class="platform-btn">View Profile</a>
+                        <a href="https://leetcode.com/u/akshit12_g" target="_blank" class="platform-btn">View
+                            Profile</a>
                     </div>
                 </div>
 
@@ -539,14 +541,11 @@
                             <span class="stat-value">178</span>
                             <span class="stat-label">Score</span>
                         </div>
-                        <div class="stat-box">
-                            <span class="stat-value">10 <i class="fas fa-fire" style="color:#ef4444;font-size:0.9rem;"></i></span>
-                            <span class="stat-label">Streak</span>
-                        </div>
                     </div>
                     <div class="platform-footer">
                         <p class="ask-me">Consistent Problem Solver via POTD</p>
-                        <a href="https://www.geeksforgeeks.org/profile/gargaksy30r" target="_blank" class="platform-btn">View Profile</a>
+                        <a href="https://www.geeksforgeeks.org/profile/gargaksy30r" target="_blank"
+                            class="platform-btn">View Profile</a>
                     </div>
                 </div>
 
@@ -564,14 +563,11 @@
                             <span class="stat-value">54</span>
                             <span class="stat-label">Solved</span>
                         </div>
-                        <div class="stat-box">
-                            <span class="stat-value">9 <i class="fas fa-fire" style="color:#f97316;font-size:0.9rem;"></i></span>
-                            <span class="stat-label">Streak</span>
-                        </div>
                     </div>
                     <div class="platform-footer">
                         <p class="ask-me">C++ Default Language | DSA Prep</p>
-                        <a href="https://www.naukri.com/code360/profile/codeAkshit" target="_blank" class="platform-btn">View Profile</a>
+                        <a href="https://www.naukri.com/code360/profile/codeAkshit" target="_blank"
+                            class="platform-btn">View Profile</a>
                     </div>
                 </div>
 
@@ -590,13 +586,15 @@
                             <span class="stat-label">Solved</span>
                         </div>
                         <div class="stat-box">
-                            <span class="stat-value">10 <i class="fas fa-fire" style="color:#3b82f6;font-size:0.9rem;"></i></span>
+                            <span class="stat-value">10 <i class="fas fa-fire"
+                                    style="color:#3b82f6;font-size:0.9rem;"></i></span>
                             <span class="stat-label">Streak</span>
                         </div>
                     </div>
                     <div class="platform-footer">
                         <p class="ask-me">Max Streak: 10 Days | Active Participant</p>
-                        <a href="https://codeforces.com/profile/axio" target="_blank" class="platform-btn">View Profile</a>
+                        <a href="https://codeforces.com/profile/axio" target="_blank" class="platform-btn">View
+                            Profile</a>
                     </div>
                 </div>
 
@@ -615,13 +613,15 @@
                             <span class="stat-label">Rating</span>
                         </div>
                         <div class="stat-box">
-                            <span class="stat-value">1 <i class="fas fa-star" style="color:#a855f7;font-size:0.9rem;"></i></span>
+                            <span class="stat-value">1 <i class="fas fa-star"
+                                    style="color:#a855f7;font-size:0.9rem;"></i></span>
                             <span class="stat-label">Stars</span>
                         </div>
                     </div>
                     <div class="platform-footer">
                         <p class="ask-me">Global Rank: 52736 | Country Rank: 49335</p>
-                        <a href="https://www.codechef.com/users/akshit_z" target="_blank" class="platform-btn">View Profile</a>
+                        <a href="https://www.codechef.com/users/akshit_z" target="_blank" class="platform-btn">View
+                            Profile</a>
                     </div>
                 </div>
             </div>
@@ -630,7 +630,7 @@
         <!-- Certifications -->
         <section id="certs" class="section">
             <h2 class="section-title">Verified Certifications</h2>
-            <div class="certifications-grid">
+            <div class="certifications-grid" id="certifications-container">
                 <div class="mini-cert standout">
                     <i class="fas fa-trophy"></i>
                     <div>
@@ -676,70 +676,11 @@
             </div>
         </section>
 
-        <!-- Social Profiles -->
-        <section id="socials" class="section">
-            <h2 class="section-title">Social Profiles</h2>
-            <div class="minimal-list profile-list">
-                <a href="https://www.linkedin.com/in/akshitgarg26/" target="_blank"
-                    class="list-item profile-btn social-btn-main">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fab fa-linkedin"></i> LinkedIn</span>
-                    </div>
-                </a>
-                <a href="https://github.com/Akshitgarg1" target="_blank" class="list-item profile-btn social-btn-main">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fab fa-github"></i> GitHub</span>
-                    </div>
-                </a>
-                <a href="mailto:garg28966@gmail.com" class="list-item profile-btn social-btn-main">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-envelope"></i> Email</span>
-                    </div>
-                </a>
-                <!-- <a href="https://www.credly.com/users/akshit-garg.7fb636c4/edit#credly" target="_blank"
-                    class="list-item profile-btn social-btn-main">
-                    <div class="item-main">
-                        <span class="item-title"><i class="fas fa-award"></i> Credly (Verified Badges)</span>
-                    </div>
-                </a> -->
-            </div>
-        </section>
-
-        <!-- Personality / Beyond the IDE -->
-        <section id="personality" class="section">
-            <h2 class="section-title">Beyond the IDE</h2>
-            <div class="personality-grid">
-                <div class="personality-card">
-                    <i class="fas fa-book-reader"></i>
-                    <h3>Reading</h3>
-                    <p>"Deep Work" by Cal Newport — focusing on cultivating intense concentration in a distracted world.
-                    </p>
-                </div>
-                <div class="personality-card">
-                    <i class="fas fa-chess-knight"></i>
-                    <h3>Chess Enthusiast</h3>
-                    <p>Consistent player with a ~1500 ELO rating; fascinated by strategic thinking and pattern
-                        recognition.</p>
-                </div>
-                <div class="personality-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Mentorship</h3>
-                    <p>Actively mentoring juniors at GEHU on Data Structures, Algorithms, and System Security
-                        fundamentals.</p>
-                </div>
-                <div class="personality-card">
-                    <i class="fas fa-microchip"></i>
-                    <h3>IoT Tinkering</h3>
-                    <p>Exploring the intersection of hardware and security through small-scale automation projects.</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section id="contact" class="section">
             <h2 class="section-title">Let's Connect</h2>
             <div class="contact-container">
-                <div class="contact-info-grid">
+                <div class="contact-info-grid" id="contact-info-container">
                     <a href="mailto:garg28966@gmail.com" class="contact-card">
                         <i class="fas fa-envelope"></i>
                         <div>
