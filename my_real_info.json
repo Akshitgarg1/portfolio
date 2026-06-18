@@ -86,7 +86,7 @@
       "degree": "B.Tech in Computer Science and Engineering",
       "duration": "2022 - 2026",
       "location": "Dehradun, India",
-      "cgpa": "8.52 / 10.0",
+      "cgpa": "8.53 / 10.0",
       "semester_sgpa": {
         "Sem 1": 8.41,
         "Sem 2": 8.68,
@@ -94,7 +94,8 @@
         "Sem 4": 8.61,
         "Sem 5": 9.00,
         "Sem 6": 8.12,
-        "Sem 7": 8.84
+        "Sem 7": 8.84,
+        "Sem 8": 8.63
       },
       "coursework": [
         "Data Structures & Algorithms",
